@@ -5,10 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     robuxInput.addEventListener('input', function() {
         const robux = parseInt(robuxInput.value);
-        const percent70 = Math.floor(robux * 0.7);
-        const percent30 = Math.floor(robux * 0.3);
+        const por70 = robux * 0.7;
+        const por30 = robux * 0.3;
 
-        output70.textContent = `70%: ${percent70}`;
-        output30.textContent = `30%: ${percent30}`;
+        const por70r = Math.floor(robux * 0.7);
+        const por30r = Math.floor(robux * 0.3);
+
+        output70.textContent = `70%: ${por70r} (${por70.toFixed(3)})`;
+        output30.textContent = `30%: ${por30r} (${por30.toFixed(3)})`;
     });
 });
